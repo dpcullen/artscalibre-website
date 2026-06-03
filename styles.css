@@ -356,6 +356,14 @@ em {
   letter-spacing: -0.02em;
 }
 
+.hero-slogan {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  color: var(--color-accent);
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
 .hero-subtitle {
   font-size: clamp(1.05rem, 2vw, 1.25rem);
   color: rgba(255,255,255,0.8);
@@ -616,8 +624,69 @@ em {
   opacity: 0.6;
 }
 
+.program-cards-two {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .program-card .btn {
   align-self: flex-start;
+}
+
+/* ============================================
+   Arts Section
+   ============================================ */
+.arts-section {
+  padding: 100px 0;
+  background: var(--color-warm-white);
+}
+
+.arts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.arts-card {
+  background: var(--color-cream);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.arts-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.arts-icon {
+  width: 56px;
+  height: 56px;
+  color: var(--color-accent);
+  margin: 0 auto 20px;
+}
+
+.arts-card h3 {
+  margin-bottom: 12px;
+}
+
+.arts-card p {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.arts-summary {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  font-style: italic;
 }
 
 /* ============================================
@@ -1002,8 +1071,16 @@ em {
 .footer-brand .logo-calibre { color: #fff; }
 .footer-brand .logo-sub { color: rgba(255,255,255,0.5); }
 
+.footer-tagline {
+  margin-top: 12px;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-accent);
+  font-style: italic;
+}
+
 .footer-mission {
-  margin-top: 16px;
+  margin-top: 12px;
   font-size: 0.9rem;
   line-height: 1.7;
   max-width: 360px;
@@ -1066,7 +1143,14 @@ em {
   .curriculum-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .program-cards {
+  .program-cards,
+  .program-cards-two {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .arts-grid {
     grid-template-columns: 1fr;
     max-width: 520px;
     margin-left: auto;
